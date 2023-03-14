@@ -1,0 +1,24 @@
+@import "../../Style-config/mixins.scss";
+@import "../../Style-config/Variable.scss";
+
+.project-container {
+  padding: 40px 0;
+  background-color:$black;
+  @include md{
+    padding-top: 10px;
+    padding-bottom: 70px;
+  }
+  .main-heading {
+    color: white;
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    @include typography(14px, 500, 1);
+    @include md {
+      padding-top: 50px;
+      
+      @include typography(40px, 500,);
+    }
+  }
+}

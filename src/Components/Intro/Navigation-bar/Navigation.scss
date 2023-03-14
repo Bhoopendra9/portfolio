@@ -1,0 +1,100 @@
+@import "../../../Style-config/Variable.scss";
+@import "../../../Style-config/mixins.scss";
+
+.top-navigation-bar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  @include md {
+    display: flex;
+    margin-top: 40px;
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .app-logo {
+    width: 143px;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .navigation {
+    display: none;
+    align-items: center;
+    @include md {
+      display: flex;
+    }
+    .navigation-item {
+      color: $white;
+      cursor: pointer;
+      @include typography(18px, 400);
+      //   margin-left: 20px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      //   box-shadow: inset 0 0 0 0 $black;
+      //   transition: color 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        
+        @include md {
+          box-shadow: inset 200px 0 0 0 $black;
+        }
+      }
+    }
+  }
+  .mobilemenu {
+    display: flex;
+    color: white;
+    z-index: 1;
+    @include md {
+      display: none;
+    }
+  }
+  .call-to-action {
+    margin-left: 25px;
+  }
+  &.mobileview {
+    background-color: black;
+    margin-top: 0;
+    .wrapper {
+      .navigation {
+        width: 100%;
+        background-color: black;
+        display: flex;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        flex-direction: column;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 225, 255, 0.1);
+        animation: mobilemenu 0.3s ease forwards;
+        .navigation-item {
+          width: 100%;
+          font-size: 20px;
+          height: auto;
+          padding: 15px 20px;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+        }
+      }
+    }
+  }
+}
+
+@keyframes mobilemenu {
+  0% {
+    transform: translateY(-130%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

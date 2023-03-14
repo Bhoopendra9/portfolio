@@ -1,0 +1,44 @@
+@import "../../../Style-config/mixins.scss";
+@import "../../../Style-config/Variable.scss";
+
+.filters {
+  @include md{
+    padding-top: 40px;
+  }
+  .filter-menu-items {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style: none;
+    margin: 30px 0;
+    gap: 8px;
+    @include md{
+      gap: 10px;
+
+    }
+    .filter-menu-item {
+      background-color: $black-lighter;
+      border-radius: 7px;
+      color: $white;
+      white-space: nowrap;
+      padding: 5px 10px;
+      @include typography(15px, 400);
+      // box-shadow: inset 0 0 0 0 #efb946;
+      // transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      cursor: pointer;
+      @include md{
+        padding: 10px 28px;
+        @include typography(22px, 400, 28px);
+      }
+      // &:hover,
+      &.active {
+        box-shadow: inset 200px 0 0 0 #efb946;
+        color: $black;
+      }
+    }
+  }
+}

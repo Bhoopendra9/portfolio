@@ -1,0 +1,98 @@
+@import "../../Style-config/mixins.scss";
+@import "../../Style-config/Variable.scss";
+
+.main-container {
+  background-color: $black;
+  padding: 25px 0;
+  overflow: hidden;
+  @include md {
+    padding: 50px 0;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    .skillICon {
+      gap: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .service-sections {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap-reverse;
+      position: relative;
+      padding: 50px 0;
+      @include md {
+        padding: 80px 0;
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      .left-section {
+        margin-top: 20px;
+        gap: 40px;
+        display: flex;
+        flex-direction: column;
+        @include md {
+          max-width: 65%;
+          gap: 60px;
+        }
+      }
+      .right-section {
+        color: white;
+        font-size: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        @include typography(25px);
+        text-transform: uppercase;
+        @include md {
+          @include typography(80px, 500);
+          margin-left: 40px;
+          flex-direction: column;
+        }
+        .text{
+          padding-right: 15px;
+          font: bolder;
+          line-height: 1;
+          @include md{
+            font-weight: 500;
+            padding: 8px 0;
+          }
+        }
+        img{
+          width: 50px;
+          @include md{
+            width: 160px;
+          }
+        }
+        .mobile{
+          @include md{
+            display: none;
+          }
+        }
+        .desktop{
+          display: none;
+          @include md {
+            display: block;
+          }
+        }
+        .icon{
+          display: flex;
+        }
+      }
+    }
+
+    // .right-col {
+    // //   width: 60%;
+    //   color: $white;
+    //   margin-left: 70px;
+    //   h2 {
+    //     margin-bottom: 30px;
+    //   }
+    //   p {
+    //     @include typography(18px, 400, 24px);
+    //     margin-bottom: 15px;
+    //   }
+    // }
+  }
+}

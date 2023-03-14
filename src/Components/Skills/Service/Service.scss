@@ -1,0 +1,39 @@
+@import "../../../Style-config/mixins.scss";
+@import "../../../Style-config/Variable.scss";
+
+.service-section {
+  gap: 20px;
+  border-bottom: 2px solid #333333;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-bottom: 30px;
+  @include md {
+    // gap: 40px;
+  }
+  .serialNumber {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 28px;
+    color: #efb946;
+    text-transform: uppercase;
+  }
+  .data-sections {
+    display: none;
+    @include md {
+      display: flex;
+      gap: 10px;
+    }
+    .data-section{
+        background-color: #252525;
+        border-radius: 5px;
+        padding: 10px 17px;
+        font-size: 16px;
+    }
+  }
+  .desc{
+    font-size: 16px;
+    color: #cccccc;
+  }
+}
